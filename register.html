@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="styleregister.css">
+        <!-- <script src="scriptregister.js"> -->
+        <script type=text/javascript>
+        function validation()
+        {
+            var fname=document.getElementById("fname");
+            var lname=document.getElementById("lname");
+            var email = document.getElementById("email");
+            var pass = document.getElementById("password");
+            var repass = document.getElementById("repassword");
+            var phone = document.getElementById("tel");
+            // var submit = document.getElementById("submit");
+            if(fname.value.trim()=="" || lname.value.trim()=="")
+            {
+                alert('Name cannot be blank');
+                fname.style.border="solid 3px red";
+                lname.style.border="solid 3px red";
+                return false;
+                // document.getElementById("ualert").style.visibility="visible";
+            //     if(email.value.trim()==""){
+            //     alert('Email cannot be blank');
+            //     return false;
+            //     }
+            // if(pass.value.trim()==""||repass.value.trim()=""){
+            //     alert('Password cannot be blank');
+            //     return false;
+
+            //     }
+            // if(phone.value.trim()==""){
+            //     alert('Phone number cannot be blank');
+            //     return false;
+            //     }
+            //     return false;
+                }
+            else{
+                return true;
+            }
+        }        
+        </script>
+        <title>Register</title>
+    </header>
+    <body>
+        <!-- <div id="title">
+            <h1 data-content="REGISTER"> -->
+            <!-- REGISTER -->
+            <!-- </h1>
+            <br>
+        </div> -->
+        <div id="div1" style="clear:both;"><h1 style="transform: rotate(-45deg);">Register</h1></div><br><br>
+        <!-- <div id="div2" style="float:right;">Regi</div> -->
+        <div>
+        <form onsubmit="return validation()" action="login.html">
+        <div class="formregister">
+            <label value="FirstName" class="lregidet">First Name</label>
+            <input id="fname" type="text" placeholder="First Name" class="iregidet" required><br>
+
+            <label value="LastName" class="lregidet">Last Name </label>
+            <input id="lname" type="text" placeholder="Last Name" class="iregidet" required><br>
+
+            <label value="Email" class="lregidet">Email Add.</label>
+            <input id="email" type="text" placeholder="Email" class="iregidet" required>
+            <label id="pemail" style="color:red; visibility:hidden" class="iregidet">Invalid Email</label><br>
+
+            <label value="Password" class="lregidet"> Password</label>
+            <input id="password" type="password" placeholder="Password" min="5" max="15" class="iregidet" required>
+            <label id="palert" style="color:red; visibility:hidden" class="iregidet">Invalid Password</label><br>
+
+            <label value="Repassword" class="lregidet">Password</label>
+            <input id="repassword" type="password" placeholder="Re-enter Password" class="iregidet" required>
+            <label id="passalert" style="color:red; visibility:hidden" class="lregidet">Password entered doesn't match</label><br>
+
+            <label value="Phone" class="lregidet">Phone Num</label>
+            <input id="tel" type="text" placeholder=" &#9742; Telephone" class="iregidet" required><br><br>
+        </div>
+        <fieldset>
+            <legend>Gender :</legend>
+            <p>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+            </p>
+            <p>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </p> 
+        </fieldset><br>
+        <!-- For accepting file  -->
+        <label class="lregidet">Please upload your ID proof(in jpg\png\zip format)</label>
+        <input type="file" accept="image/*,.rar,application/zip" class="lregidet"><br><br>
+        <button onclick="validation" id="submit">Submit</button>
+        <p id="lregidet">Or <a href="login.html">Login</a> instead.</p>
+        </form>
+        </div>
+    </body>
+    <footer>
+        <br><br>
+        <hr width="80%">
+        <p class="fp">Copyright &copy; 2020 Spammy</p>
+    </footer>
+</html>
+
+
+
+<!-- For choosing favcolor
+    <label>What is your favorite color?</label><input type="color" name="favcolor" value="#ff0000">
+    <label>What is your Date Of Birth?</label><input type="datetime-local" />
+
+    <label>What is your favorite?</label>
+    <input type="checkbox" name="Tea">
+    I like Tea!
+    <input type="checkbox" name="Coffee">
+    I like Coffee!
+    <input type="checkbox" name="Juice">
+    I like Juice! -->
+<!-- can be used for feedback
+Marks: <input type="number" size="6" name="marks" min="0" max="5"/> -->
+<!-- can be used for zooming 
+Subject Feedback: <input type="range" size="2" name="feedback" min="1" max="5" />-->
+<!-- for searching <input type="search" name="googlesearch">-->
+<!-- for showing calender, week,month<input type="week" />
+<input type="month" /> -->
+<!-- for date and time -->
+<!-- for time<input type="time" /> 
+<fieldset> 
+<p><label>Meeting time: <input type=datetime name="meeting.start"></label>
+</fieldset> -->
+<!-- <input type="submit" value="Save" formnovalidate> form will NOT be validated -->
+
+    
+

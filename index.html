@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <a href="file:///E:/login.html">Login</a>
+  <head>
+    <meta charset="utf-8">
+    <title>SPAMMY</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="header">
+    <div id="myClockDisplay" class="clock"></div>
+    <script type="text/javascript">
+    function showTime(){
+    var date=new Date();
+    var h=date.getHours();      //0-23
+    var m=date.getMinutes();    //0-59
+    var s=date.getSeconds();    //0-59
+    var session="AM";
+    if(h==0){
+        h=12;
+    }
+    if(h<12){
+        session="AM"
+    }
+    if(h>12){
+        session="PM";
+        h=h-12;
+    }
+    h=(h<10)?"0"+h:h;
+    m=(m<10)?"0"+m:m;
+    s=(s<10)?"0"+s:s;    
+    var time=h+":"+m+":"+s+" "+session;
+    document.getElementById("myClockDisplay").innerText=time;
+    document.getElementById("myClockDisplay").textContent=time;
+    setTimeout(showTime,1000);
+}
+showTime();
+</script>
+      <div class="header-logo">SPM</div>
+      <div class="header-list">
+        <ul>
+          <li>About</li>
+          <li>Features</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="copy-container">
+        <h1>Welcome to the world of spam!<span>.</span></h1>
+        <h2>We will help you detect it.</h2>
+      </div>
+      
+      <div class="contents">
+        <h3 class="section-title">Features</h3>
+        <div class="contents-item">
+          <img src="email.jpg">
+          <p>Email Spam detection</p>
+        </div>
+        <div class="contents-item">
+          <img src="para.png">
+          <p>Paragraph</p>
+        </div>
+        <div class="contents-item">
+          <img src="yt.png">
+          <p>Youtube Comments</p>
+        </div>
+        <div class="contents-item">
+          <img src="contacts.png">
+          <p>Contacts</p>
+        </div>
+      </div>
+    
+     <a href="file:///E:/index2.htm">Find Spam</a>
+      
+      <div class="contact-form">
+        <h3 class="section-title">Contact us</h3>
+        <p>Email (Required)</p>
+        <!-- Add an <input> tag -->
+        <input>
+        
+        <p>Message (Required)</p>
+        <!-- Add a <textarea> tag --> 
+        <textarea></textarea>
+        
+        <p>* Required fields must be filled</p>
+        <!-- Add an <input> tag -->
+        <input class="contact-submit" type="submit" value="Send">
+        
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">Spammy</div>
+      <div class="footer-list">
+        <ul>
+          <li>About</li>
+          <li>Features</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

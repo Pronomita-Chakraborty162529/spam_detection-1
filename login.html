@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylelogin.css">
+        <!-- <script src="scriptlogin.js"></script> -->
+        <script>
+            var username=document.getElementById("user").value;
+            var password=document.getElementById("pass").value;
+            var ualert=document.getElementById("ualert");
+            var palert=document.getElementById("palert");
+            function validation(){ 
+                if(username.trim()!=="" && password.trim()!==""){
+                    if(username.trim()===password.trim()){
+                    alert('Verified!');
+                    // username.style.border="solid 3px green";
+                    // password.style.border="solid 3px green";
+                    return true;
+                    }
+                    else{
+                        alert('Fields cannot be null!');
+                        username.style.border="3px solid red";
+                        password.style.border="3px solid red";
+                        ualert.style.visibility="visible";
+                        palert.style.visibility="visible";
+                        return false;
+                    }
+                }
+                else{
+                    alert('Not Verified!');
+                    return false;
+                }
+            }
+            function increaseSize(){
+                alert('Increased');
+                // var element=document.getElementsByClassName("lregidet");
+                // for(var x=0;x<element.length;x++){
+                //     element[x].style.color="red";
+                //     element[x].style.fontSize="45"; 
+                //     // element[x].style.color="yellow";
+                //     element[x].style.fontWeight="bold"; 
+                //     element[x].style.fontStyle="Italic";//with id name
+                }//with class name
+                // if(username.trim()!=="" && password.trim()!==""){
+                //     username.style.border="solid 3px green";
+                //     password.style.border="solid 3px green";
+                // }
+            } 
+            function originalSize(){
+                alert('Original');
+                // for(var x=0;x<element.length;x++){
+                //     element[x].style.color="black;
+                //     element[x].style.fontSize="25"; 
+                //     // element[x].style.color="yellow";
+                //     element[x].style.fontWeight="bold"; 
+                //     element[x].style.fontStyle="Italic";
+                }
+            }
+        </script>
+        <title>Login</title>
+    </head>
+    <body>
+    <!-- Microsoft box -->
+        <!-- <div class="box_shadow"></div> -->
+        <!-- <h1 style="text-align:center;" id="title"></h1> -->
+        <form onsubmit="return validation()" action="index.html"><br>
+            <!-- Square boxes -->
+                <div id="div1"></div>
+                <div id="div1"></div>
+                <div id="div2"></div>
+                <div id="div2"></div>
+
+            <div class="formlogin" onmouseover="increaseSize()" onmouseout="originalSize()">
+                <label value="Username" style="text-align:center;" class="lregidet">Username</label>
+                <input type="text" placeholder="Username" class="iregidet" id="user" style="border:2px solid black;" required>
+                <label id="ualert" style="color:red;visibility:hidden;">Invalid Username</label><br>
+
+                <label value="Password" style="text-align:center;" class="lregidet">Password</label>
+                <input id="pass" type="password" placeholder="Password" class="iregidet" style="border:2px solid black;" required>
+                <label id="palert" style="color:red; visibility:hidden;">Invalid Password</label><br>
+
+                <input type="submit" value="Submit" style="text-align:center;" class="submit">
+                <p class="ilogdet">Or would you like to <a href="register.html">Register</a>?</p><br><br>
+            </div>
+        </form>
+    </body>
+    <footer>
+        <div class="footer">
+            <hr>
+            <p class="fp">Copyright &copy; 2020 Spammy</p>
+        </div>
+    </footer>
+<!-- Display name in very fashionable manner -->
+<!-- <div id="title">
+<h1 data-content="LOGIN">LOGIN</h1>
+</div>  -->
+
+</html>

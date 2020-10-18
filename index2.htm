@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        Find Spam 
+    </title> 
+</head> 
+  
+<body style="text-align:center;"
+      id="body"> 
+    <h1 style="color:green;">   
+            Spammy   
+        </h1> Your text: 
+    <input type="text" 
+           id="text1"
+           name="tname1"> 
+     
+    <button onclick="gfg_Run()"> 
+        Compare 
+    </button> 
+    <p id="GFG_DOWN" 
+       style="  
+              font-size: 20px; 
+              font-weight: bold;"> 
+    </p> 
+    <script> 
+        var str1 = document.getElementById("text1"); 
+        var str2 = "money"; 
+  
+        var el_down = document.getElementById("GFG_DOWN");
+ 
+  
+        function gfg_Run() { 
+            var a = str1.value; 
+            var b = str2; 
+            var ans = a.localeCompare(b); 
+            var res = ""; 
+            if (ans == -1) { 
+                res = 'Ham(not spam)';
+		 el_down.style.color = "green";
+            } else if (ans == 0) { 
+                res = 'Spam';
+		el_down.style.color = "red"; 
+            } else { 
+                res = 'Ham(Not spam)'; 
+		el_down.style.color = "green";
+            } 
+            el_down.innerHTML = res; 
+        } 
+    </script> 
+</body> 
+  
+</html> 
